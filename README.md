@@ -9,9 +9,14 @@
 
 ---
 
-## 🚀 How to Install
+## 📝Note
 
 > 📦 This extension is not on the Chrome Web Store. You’ll install it manually by cloning this repo.
+</br>
+
+> 🔑 The `.js` files have been encrypted in a manner that Chrome can read them, but they make no sense to humans.
+---
+## 🚀 How to Install
 
 ### 1. Clone this repository
 
