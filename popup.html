@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Promptify</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      min-width: 340px;
+      min-height: 180px;
+      max-width: 700px;
+      max-height: 600px;
+      background: #101a2b;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .sidebar-container {
+      width: 100%;
+      min-width: 320px;
+      max-width: 650px;
+      min-height: 120px;
+      max-height: 600px;
+      background: #101a2b;
+      border-radius: 22px;
+      box-shadow: 0 8px 32px 0 #00eaff33;
+      border: 1.5px solid #00eaff77;
+      padding: 28px 28px 18px 28px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .bar {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #00eaff 0%, #4af7c2 100%);
+      border-radius: 2px;
+      margin-bottom: 16px;
+      box-shadow: 0 0 12px #00eaff99, 0 0 24px #4af7c299;
+      align-self: flex-start;
+    }
+    .label {
+      font-weight: 700;
+      font-size: 1.1em;
+      margin-bottom: 8px;
+      color: #60eaff;
+      letter-spacing: 0.04em;
+      text-shadow: 0 0 4px #0ff;
+    }
+    .promptbox {
+      width: 100%;
+      min-height: 40px;
+      max-height: 340px;
+      background: #182544;
+      color: #aefbff;
+      border: 1.5px solid #00eaff;
+      border-radius: 12px;
+      font-family: 'Lexend', Arial, sans-serif;
+      font-size: 1.08em;
+      padding: 12px;
+      resize: none;
+      overflow-y: hidden;
+      box-shadow: 0 0 8px #0ff2;
+      transition: border 0.2s;
+      outline: none;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      line-height: 1.5;
+    }
+    /* Neon custom scrollbar */
+    .promptbox::-webkit-scrollbar {
+      width: 8px;
+      background: #182544;
+    }
+    .promptbox::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #00eaff 0%, #4af7c2 100%);
+      border-radius: 6px;
+      box-shadow: 0 0 6px #00eaff99;
+    }
+    .promptbox::-webkit-scrollbar-track {
+      background: #182544;
+      border-radius: 6px;
+    }
+    .copy-btn {
+      margin-top: 4px;
+      align-self: flex-end;
+      background: linear-gradient(90deg, #00eaff 0%, #4af7c2 100%);
+      color: #101a2b;
+      border: none;
+      border-radius: 8px;
+      padding: 7px 18px;
+      font-family: 'Lexend', Arial, sans-serif;
+      font-size: 1em;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 0 8px #00eaff88;
+      transition: background 0.2s, color 0.2s;
+    }
+    .copy-btn:active {
+      background: #00eaff;
+      color: #fff;
+    }
+    #status {
+      margin-top: 10px;
+      font-size: 1em;
+      color: #ffb86c;
+      text-shadow: 0 0 2px #fffa;
+      letter-spacing: 0.02em;
+      min-height: 24px;
+      font-weight: 600;
+    }
+    #error {
+      margin-top: 10px;
+      font-size: 1em;
+      color: #ff5555;
+      text-shadow: 0 0 2px #fffa;
+      letter-spacing: 0.02em;
+      min-height: 24px;
+      font-weight: 700;
+    }
+    .footer {
+      margin-top: 14px;
+      text-align: right;
+      font-size: 0.93em;
+      color: #4af7c2;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar-container">
+    <div class="bar"></div>
+    <div class="label">AI Prompt</div>
+    <textarea id="prompt" class="promptbox" readonly></textarea>
+    <button class="copy-btn" id="copyBtn">Copy</button>
+    <div id="status"></div>
+    <div id="error"></div>
+    <div class="footer">Promptify &mdash; Powered by Gemini Nano</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
