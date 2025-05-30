@@ -44,7 +44,7 @@ In **Google Chrome**:
 1. Open Chrome and go to `chrome://extensions/`
 2. Enable **Developer Mode** (top-right)
 3. Click **Load Unpacked**
-4. Select the cloned `promptify` folder
+4. Select the cloned `promptify` folder _(make sure to delete the README.md and LICENSE files before doing so)_
 
 ✅ Promptify is now installed and ready to use.
 
